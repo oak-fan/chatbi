@@ -1,0 +1,43 @@
+[project]
+name = "cogmait-chatbi"
+version = "0.1.0"
+description = "Standalone ChatBI and Benchmark service extracted from cogmait-backend-v2."
+authors = [{ name = "CogmAIT Team", email = "dev@cogmait.com" }]
+requires-python = ">=3.12,<3.13"
+dynamic = ["dependencies"]
+
+[tool.poetry]
+packages = [{ include = "app" }, { include = "cogmait_shared" }]
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.13"
+fastapi = "^0.109.0"
+uvicorn = { extras = ["standard"], version = "^0.27.0" }
+httpx = "^0.28.1"
+sqlalchemy = "^2.0.25"
+alembic = "^1.13.1"
+pydantic = "^2.5.3"
+pydantic-settings = "^2.2.1"
+asyncpg = "^0.29.0"
+cryptography = "^43.0.0"
+litellm = ">=1.81,<1.82"
+pymilvus = "^2.5.16"
+jieba = "^0.42.1"
+sqlglot = "^26.0.0"
+redis = { extras = ["hiredis"], version = "^7.1.1" }
+pyyaml = "^6.0.2"
+rapidfuzz = "^3.13.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.4"
+pytest-asyncio = "^0.23.3"
+aiosqlite = "^0.20.0"
+ruff = "^0.5.6"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+pythonpath = ["."]
+
+[build-system]
+requires = ["poetry-core>=1.7.0"]
+build-backend = "poetry.core.masonry.api"

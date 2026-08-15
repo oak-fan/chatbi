@@ -1,0 +1,1 @@
+"""CogmAIT ChatBI standalone service."""

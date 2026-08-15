@@ -1,0 +1,11 @@
+"""LLM 系统参数键。"""
+
+AI_DEFAULT_COMPLETION_MODEL_CONFIG_KEY = "ai.default_completion_model"
+AI_DEFAULT_EMBEDDING_MODEL_CONFIG_KEY = "ai.default_embedding_model"
+AI_DEFAULT_RERANK_MODEL_CONFIG_KEY = "ai.default_rerank_model"
+
+__all__ = [
+    "AI_DEFAULT_COMPLETION_MODEL_CONFIG_KEY",
+    "AI_DEFAULT_EMBEDDING_MODEL_CONFIG_KEY",
+    "AI_DEFAULT_RERANK_MODEL_CONFIG_KEY",
+]

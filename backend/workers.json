@@ -1,0 +1,10 @@
+{
+  "workers": [
+    {
+      "module": "app.workers.system.chatbi_preprocess_worker"
+    },
+    {
+      "module": "app.workers.system.chatbi_benchmark_worker"
+    }
+  ]
+}

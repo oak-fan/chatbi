@@ -1,0 +1,39 @@
+# ChatBI BIRD benchmark experiment presets.
+# evidence is always forced true by bench_bird.py regardless of preset.
+
+baseline:
+  description: "Legacy baseline with rewrite on"
+  candidate_paths: ddl:chain_of_thought,ddl:direct,ddl:problem_decomposition
+  schema_selection: true
+  qsql_recall: false
+  business_knowledge: false
+  sql_fix: true
+  sql_selection: true
+  sql_validate: false
+  rewrite_enabled: true
+  summary_enabled: true
+  schema_top_k: null
+  schema_full_if_small: false
+  schema_small_table_threshold: 15
+  model: null
+
+exp:
+  description: "rag+value_founding+group_by_audit+evidence, full schema, 3 candidates"
+  candidate_paths: ddl:chain_of_thought,ddl:direct,ddl:problem_decomposition
+  schema_selection: false
+  qsql_recall: false
+  business_knowledge: false
+  sql_fix: false
+  sql_selection: false
+  sql_validate: false
+  rewrite_enabled: false
+  summary_enabled: false
+  schema_top_k: null
+  schema_full_if_small: false
+  schema_small_table_threshold: 15
+  sql_fix_max_attempts: 2
+  rag: true
+  value_founding: true
+  group_by_audit: true
+  evidence: true
+  model: null
